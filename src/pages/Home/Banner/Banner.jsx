@@ -1,17 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 
-import ButtonStyle from "../../Shared/ButtonStyle";
-import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
-
-
-
-
 const Banner = () => {
     return (
         <>
             <div className="carousel w-full">
                 <div id="item1" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/NLPm5R2/Screenshot-2023-11-25-100955.png" className="w-full h-[100vh]" />
+                    <img src="https://i.ibb.co/YBjt2jx/medical-Banner1.png" className="w-full h-[100vh]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#item4" className="btn btn-circle">❮</a>
                         <a href="#item2" className="btn btn-circle">❯</a>

@@ -1,0 +1,5 @@
+.textStyle {
+    writing-mode: vertical-rl;
+    /* text-emphasis: triangle blue; */
+    text-emphasis-position: under left;
+}
