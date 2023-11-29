@@ -1,22 +1,34 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 /* eslint-disable react/no-unknown-property */
 const LogIn = () => {
     const [showPassword, setPassword] = useState(false);
+
+    const { singIn } = useContext(AuthContext)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log('hello', email, password)
+        singIn(email, password)
+            .then(res => {
+                const user = res.user;
+                console.log(user);
+            })
     }
 
     return (
         <div>
-
-            <div className="hero min-h-screen bg-gray-300 ">
+            <Helmet>
+                <title>Medical Camp | Login</title>
+            </Helmet>
+            <h1>All Services Here</h1>
+            <div className="hero min-h-screen bg-gray-200 ">
                 <div className="hero-content flex-col">
                     <h1 className="text-3xl p-6 font-bold text-cyan-500 ">Please Login Now...</h1>
 
