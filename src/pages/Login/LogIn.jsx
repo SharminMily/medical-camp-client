@@ -1,33 +1,49 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 /* eslint-disable react/no-unknown-property */
 const LogIn = () => {
+    const { singIn, user } = useContext(AuthContext)
     const [showPassword, setPassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const { singIn } = useContext(AuthContext)
+    const from = location.state?.from?.pathname || "/";
+    console.log('state in the location login page', location.state)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log('hello', email, password)
+        
         singIn(email, password)
             .then(res => {
                 const user = res.user;
                 console.log(user);
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate(from, { replace: true });
             })
+          
     }
 
     return (
         <div>
             <Helmet>
                 <title>Medical Camp | Login</title>
-            </Helmet>
-            <h1>All Services Here</h1>
+            </Helmet>           
             <div className="hero min-h-screen bg-gray-200 ">
                 <div className="hero-content flex-col">
                     <h1 className="text-3xl p-6 font-bold text-cyan-500 ">Please Login Now...</h1>

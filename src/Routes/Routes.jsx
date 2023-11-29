@@ -6,6 +6,8 @@ import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/Login/LogIn";
 import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
+import AvailableCamps from "../pages/AvailableCamps/AvailableCamps";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -18,10 +20,18 @@ export const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: '/services',
+        path: 'services',
         element: <Services></Services>
       },
-    ]
+      {
+        path: 'availableCamps',
+        element: <PrivateRoute><AvailableCamps></AvailableCamps></PrivateRoute>
+      },
+    //   {
+    //     path: 'availableCamps',
+    //     element: <AvailableCamps></AvailableCamps>
+    //   },
+     ]
   },
   {
     path: '/login',
