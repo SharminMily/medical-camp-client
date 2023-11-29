@@ -4,10 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import SocialAccount from "../Shared/SocialAccount/SocialAccount";
 
 /* eslint-disable react/no-unknown-property */
 const LogIn = () => {
-    const { singIn, user } = useContext(AuthContext)
+    const { singIn } = useContext(AuthContext)
     const [showPassword, setPassword] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,7 +21,7 @@ const LogIn = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log('hello', email, password)
-        
+
         singIn(email, password)
             .then(res => {
                 const user = res.user;
@@ -58,7 +59,7 @@ const LogIn = () => {
                             <div className="card flex-1 items-center align-middle w-full max-w-lg bg-gray-100 shadow-2xl  px-10" data-aos="zoom-in">
                                 <div className="pb-8">
 
-                                    <form onSubmit={handleSubmit} className="card-body ">
+                                    <form onSubmit={handleSubmit} className="card-body pb-0">
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Email</span>
@@ -84,10 +85,10 @@ const LogIn = () => {
                                     </form>
 
 
-                                    <label className="label">
-                                        Not registered.? <Link to="/register" className="label-text-alt link link-hover text-blue-700  font-bold underline"> Create account</Link>
+                                    <label className="label text-blue-700 text-base font-bold">
+                                        Not registered.? <Link to="/register" className="label-text-alt link link-hover text-blue-700 text-sm  font-bold underline"> Create account</Link>
                                     </label>
-                                    {/* <SocialLogin></SocialLogin> */}
+                                    <SocialAccount></SocialAccount>
                                 </div>
                             </div>
                         </div>

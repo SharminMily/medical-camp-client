@@ -9,9 +9,9 @@ const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
-       logOut()
-       .then(() => {})
-       .catch(error => console.log(error))
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
     }
 
     const NavOptions = <>
@@ -63,9 +63,35 @@ const NavBar = () => {
                         {NavOptions}
                     </ul>
                 </div>
+                {/* login,logout, user */}
                 <div className="navbar-end">
-                    {
+                    {user?.email ? <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src={user.photoURL} alt={user.displayName} />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white text-black hover:text-black rounded-box w-52">
+                            <li>
+                                <button className='btn btn-sm  text-blue-600 hover:text-black'>Name: {user?.displayName} </button>
+                                <button className="btn btn-sm  btn-ghost hover:text-black">{user?.email}</button>
+
+                            </li>
+                            <li>
+                                <button onClick={logOut}
+                                    className="btn btn-sm btn-ghost bg-cyan-500 text-white hover:text-black">Logout</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                        :
+                        <NavLink to="/login"><a className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
+                        hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Login</a></NavLink>
+                    }
+                    {/* {
                         user ? <>
+                        <span>{user?.displayName}
+                        </span>
                         <button onClick={handleLogOut} className="btn btn-ghost bg-cyan-500">LogOut</button>
                         </> : <>
                             <Link to="/login">
@@ -73,7 +99,7 @@ const NavBar = () => {
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Login</button>
                             </Link>
                         </>
-                    }
+                    } */}
                 </div>
             </div>
         </>
