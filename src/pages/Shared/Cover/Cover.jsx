@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 const Cover = ({ img, title, description }) => {
     return (
