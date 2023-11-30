@@ -15,10 +15,10 @@ const AboutUs = () => {
 
                     <p className='absolute textStyle font-bold  text-center mt-8 mx-2 text-cyan-400 p-2 '>-Our Medical Camp Management team.</p>
                     <figure><img src="https://i.ibb.co/QkM1Xgb/about-Dr-removebg-preview.png" alt="Movie" className='relative' /></figure>
-                            {/* social icon button */}
+                    {/* social icon button */}
                     <p className='mx-4 text-center'>
                         <button type="button" className="text-blue-700 border border-blue-700 hover:bg-cyan-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:hover:bg-cyan-500 ">
-                            <FaArrowRight className='text-xl'/>
+                            <FaArrowRight className='text-xl' />
                             <h1 className="pl-2">Contact team</h1>
                         </button>
                         <button type="button" className="text-blue-700 border border-blue-700 hover:hover:bg-cyan-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-cyan-500 ">
@@ -39,8 +39,8 @@ const AboutUs = () => {
                         <button type="button" className="text-blue-700 border border-blue-700 hover:bg-cyan-500  hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-cyan-500 ">
                             <FaGoogle />
                         </button>
-                        <button type="button" className="text-blue-700 border border-blue-700 hover:bg-cyan-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-cyan-500 ">                      
-                            <FaArrowLeft className='text-xl'/>
+                        <button type="button" className="text-blue-700 border border-blue-700 hover:bg-cyan-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-cyan-500 ">
+                            <FaArrowLeft className='text-xl' />
                             <h1 className="pl-2 ">Contact team</h1>
                         </button>
                     </p>

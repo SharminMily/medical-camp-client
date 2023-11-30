@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const PopularCCard = ({ camps }) => {
-    const { _id, Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
+    const { _id, Camp_id, CampName, Details, CampFees, Date, Location, Time, Image } = camps;
 
     const handleAddToCamp = () => {
         // console.log(blog)
@@ -20,8 +20,8 @@ const PopularCCard = ({ camps }) => {
                 title: "camp added successfully!",
                 showConfirmButton: false,
                 timer: 1500
-              });
-            
+            });
+
         }
         else {
             const isExits = campListItem.find((camps) => camps._id
@@ -36,16 +36,16 @@ const PopularCCard = ({ camps }) => {
                     title: "camp added successfully!",
                     showConfirmButton: false,
                     timer: 1500
-                  });
+                });
                 //    toast.success("added!", "blog added successfully!", "success");
             }
             else {
                 Swal.fire({
                     icon: "error",
                     title: "Wrong",
-                    text: "already added! No duplicate !" 
-                    
-                  });
+                    text: "already added! No duplicate !"
+
+                });
                 //    toast.error("already added!", "No duplicate !", "error");
             }
 
