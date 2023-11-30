@@ -7,7 +7,7 @@ const PopularCamp = () => {
     const [allCamps, setAllCamps] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/camps')
+        fetch('https://medical-camp-server-tau.vercel.app/camps')
             .then(res => res.json())
             .then(data => setAllCamps(data))
     }, []);

@@ -9,17 +9,17 @@ const AvailableCamps = () => {
     const [allCamps, setAllCamps] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/camps')
+        fetch('https://medical-camp-server-tau.vercel.app/camps')
             .then(res => res.json())
             .then(data => setAllCamps(data))
     }, []);
     // console.log(allCamps)
     return (
         <>
-         <Helmet>
-            <title>Medical Camp | Available Camp</title>  
+            <Helmet>
+                <title>Medical Camp | Available Camp</title>
             </Helmet>
-        <NavBar></NavBar>
+            <NavBar></NavBar>
             <Cover img={"https://i.ibb.co/r40gT2p/medical-Banner8.png"} title={"Medical Camp Here"} description={"Medical camps offer a variety of healthcare services to communities, especially in areas where regular access to medical facilities may be limited. The services provided during medical camps are often diverse, aiming to address both preventive and curative aspects of healthcare."}>
             </Cover>
 
