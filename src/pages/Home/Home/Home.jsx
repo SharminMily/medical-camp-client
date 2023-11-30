@@ -13,12 +13,14 @@ const Home = () => {
              <Helmet>
                 <title>Medical Camp | Home</title>                
             </Helmet>
+            
             <NavBar></NavBar>
             <Banner></Banner>
             <OurServices></OurServices>
             <PopularCamp></PopularCamp>
             <Reviews></Reviews>
             <AboutUs></AboutUs>
+
         </div>
     );
 };
