@@ -8,12 +8,14 @@ import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
 import AvailableCamps from "../pages/AvailableCamps/AvailableCamps";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

@@ -8,11 +8,11 @@ const AvailableCamps = () => {
     const [allCamps, setAllCamps] = useState([]);
 
     useEffect(() => {
-        fetch('camp.json')
+        fetch('http://localhost:5000/camps')
             .then(res => res.json())
             .then(data => setAllCamps(data))
     }, []);
-    console.log(allCamps)
+    // console.log(allCamps)
     return (
         <>
         <NavBar></NavBar>

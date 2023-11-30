@@ -1,43 +1,31 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-const AvailableCCard = ({ camps }) => {
-    // console.log(category)
-    // eslint-disable-next-line no-unused-vars
+import { IoLocationOutline } from "react-icons/io5";
+
+const PopularCCard = ({ camps }) => {
     const { Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
-
-
-    const handleDetailBtn = Camp_id => {
-        console.log('hello')
-    }
-
     return (
         <>
             <div className=''>
-                <div className="card bg-base-100 shadow-xl border">
-                    <div className='border-cyan-600 p-2 m-4 mb-0 gap-8 border-b-2 border rounded'>
-
-                        <div className='flex justify-around items-center gap-6 text-cyan-500 font-bold'>
-                            <p> {Date}</p>
-                            <p> {Time}</p>
-                        </div>
-
-                    </div>
+                <div className="card flex flex-col-reverse bg-base-100 shadow-xl border">
+                   
                     <div className="card-body py-6">
-                        <h2 className="text-sm ">{Location}</h2>
+                        <h2 className="text-sm flex justify-start items-center "><IoLocationOutline />{Location}</h2>
                         <h5 className="card-title font-semibold">
                             {CampName}
                         </h5>
                         <p>{Details}</p>
 
-                        <div className="flex gap-2">
+                        <div className="flex justify-center gap-2">
                             <button onClick={() => document.getElementById(Camp_id).showModal()} className='btn bg-cyan-600 text-white hover:bg-black '>More Details</button>
 
                             {/* <Link to={`/wishlist/${_id}`}><button className="btn  btn-outline btn-primary hover:btn-black">wishlist</button></Link> */}
+                            {/*  onClick={() => handleDetailBtn(Camp_id)} */}
 
-                            <button onClick={() => handleDetailBtn(Camp_id)} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button>
+                            <button className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button>
                         </div>
                     </div>
-                    <figure><img src={Image} alt="Shoes" className="h-[45vh] w-full" /></figure>
+                    <div className="">
+                    <figure><img src={Image} alt="" className="h-[45vh] w-full" /></figure>
+                    </div>
                 </div>
 
                 {
@@ -87,4 +75,4 @@ const AvailableCCard = ({ camps }) => {
     );
 };
 
-export default AvailableCCard;
+export default PopularCCard;
