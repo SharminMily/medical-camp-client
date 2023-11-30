@@ -6,7 +6,7 @@ const OurServices = () => {
     const [healthCare, setHealthCare] = useState([]);
 
     useEffect(() => {
-        fetch('health.json')
+        fetch('http://localhost:5000/healthCare')
             .then(res => res.json())
             .then(data => setHealthCare(data))
     }, []);

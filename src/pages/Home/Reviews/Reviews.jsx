@@ -19,7 +19,7 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div className='mx-20 my-12'>
+        <div className='mx-20 my-12 pt-6 px-6 bg-gray-50'>
             <SectionTitle heading="reviews" subHeading="medical Camp Top Review" description="What Our Client say about Medical management system">
             </SectionTitle>
 

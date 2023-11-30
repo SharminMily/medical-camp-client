@@ -10,6 +10,7 @@ import AvailableCamps from "../pages/AvailableCamps/AvailableCamps";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import AddCamp from "../pages/AddCamp/AddCamp";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 
 export const router = createBrowserRouter([
@@ -25,19 +26,19 @@ export const router = createBrowserRouter([
       {
         path: 'services',
         element: <Services></Services>
-      },
-      {
-        path: 'addCamp',
-        element: <AddCamp></AddCamp>
-      },
+      },     
       {
         path: 'availableCamps',
         element: <PrivateRoute><AvailableCamps></AvailableCamps></PrivateRoute>
       },
-    //   {
-    //     path: 'availableCamps',
-    //     element: <AvailableCamps></AvailableCamps>
-    //   },
+      {
+        path: 'addCamp',
+        element: <PrivateRoute><AddCamp></AddCamp></PrivateRoute>
+      },
+      {
+        path: 'contact',
+        element: <ContactUs></ContactUs>
+      },
      ]
   },
   {

@@ -3,6 +3,7 @@ import AvailableCCard from "./AvailableCCard";
 import Cover from "../Shared/Cover/Cover";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import NavBar from "../Shared/NavBar/NavBar";
+import { Helmet } from "react-helmet-async";
 
 const AvailableCamps = () => {
     const [allCamps, setAllCamps] = useState([]);
@@ -15,6 +16,9 @@ const AvailableCamps = () => {
     // console.log(allCamps)
     return (
         <>
+         <Helmet>
+            <title>Medical Camp | Available Camp</title>  
+            </Helmet>
         <NavBar></NavBar>
             <Cover img={"https://i.ibb.co/r40gT2p/medical-Banner8.png"} title={"Medical Camp Here"} description={"Medical camps offer a variety of healthcare services to communities, especially in areas where regular access to medical facilities may be limited. The services provided during medical camps are often diverse, aiming to address both preventive and curative aspects of healthcare."}>
             </Cover>
