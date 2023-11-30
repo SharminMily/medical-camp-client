@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import { IoLocationOutline, IoTime } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const PopularCCard = ({ camps }) => {
     const { _id, Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
 
-    const handleAddToWishlist = () => {
+    const handleAddToCamp = () => {
         // console.log(blog)
         const addCampArray = [];
 
@@ -13,7 +14,14 @@ const PopularCCard = ({ camps }) => {
         if (!campListItem) {
             addCampArray.push(camps);
             localStorage.setItem('camps', JSON.stringify(addCampArray))
-            // toast.success("added!", "blog added successfully!", "success");
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "camp added successfully!",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            
         }
         else {
             const isExits = campListItem.find((camps) => camps._id
@@ -22,9 +30,22 @@ const PopularCCard = ({ camps }) => {
             if (!isExits) {
                 addCampArray.push(...campListItem, camps)
                 localStorage.setItem('camps', JSON.stringify(addCampArray))
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "camp added successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 //    toast.success("added!", "blog added successfully!", "success");
             }
             else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Wrong",
+                    text: "already added! No duplicate !" 
+                    
+                  });
                 //    toast.error("already added!", "No duplicate !", "error");
             }
 
@@ -57,7 +78,7 @@ const PopularCCard = ({ camps }) => {
                             {/* <Link to={`/wishlist/${_id}`}><button className="btn  btn-outline btn-primary hover:btn-black">wishlist</button></Link> */}
                             {/*  onClick={() => handleDetailBtn(Camp_id)} */}
 
-                            <Link> <button onClick={handleAddToWishlist} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
+                            <Link> <button onClick={handleAddToCamp} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
                         </div>
                     </div>
                     <div className="">

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import AddCampCard from "./AddCampCard";
 import NavBar from "../Shared/NavBar/NavBar";
+import Cover from "../Shared/Cover/Cover";
+import { Helmet } from "react-helmet-async";
 
 
 const AddCamp = () => {
@@ -36,7 +38,13 @@ const AddCamp = () => {
 
     return (
         <div>
-            <NavBar></NavBar>           
+             <Helmet>
+                <title>Medical Camp | Add camp</title>                
+            </Helmet>
+            <NavBar></NavBar>    
+            <div className="">
+            <Cover img="https://i.ibb.co/NLPm5R2/Screenshot-2023-11-25-100955.png" title="Your Adding  camp here "></Cover>
+            </div>       
             <SectionTitle subHeading="Add Card" heading="Add to Card"></SectionTitle>
 
             <div>

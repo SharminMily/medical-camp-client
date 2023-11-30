@@ -10,7 +10,7 @@ const Cover = ({ img, title, description }) => {
                 bgImageAlt="the services"
                 strength={-200}
             >
-                <div className="hero h-[500px] min-h-screen">
+                <div className="hero h-[300px] min-h-screen">
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-xl z-10 bg-opacity-30 rounded-lg p-8 bg-black text-white">

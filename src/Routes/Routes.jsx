@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import AddCamp from "../pages/AddCamp/AddCamp";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 
 export const router = createBrowserRouter([
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
       {
         path: 'addCamp',
         element: <PrivateRoute><AddCamp></AddCamp></PrivateRoute>
-      },
+      },     
       {
         path: 'contact',
         element: <ContactUs></ContactUs>
@@ -48,6 +49,11 @@ export const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register></Register>
-  }
+  },
+
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+  },
 
 ]);

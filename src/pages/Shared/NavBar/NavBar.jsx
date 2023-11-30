@@ -19,12 +19,7 @@ const NavBar = () => {
             <NavLink to='/' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Home
             </NavLink>
-        </li>
-        {/* <li>
-            <NavLink to='/services' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
-      hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">services
-            </NavLink>
-        </li> */}
+        </li>      
         <li>
             <NavLink to='/availableCamps' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Available Camps
@@ -36,11 +31,18 @@ const NavBar = () => {
             </NavLink>
         </li>
 
+          <li>
+            <NavLink to='/dashboard' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
+      hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Dashboard
+            </NavLink>
+        </li>
+
         <li>
             <NavLink to='/contact' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">contact us
             </NavLink>
         </li>
+
 
      
     </>
@@ -80,7 +82,7 @@ const NavBar = () => {
 
                             </li>
                             <li>
-                                <button onClick={logOut}
+                                <button onClick={handleLogOut}
                                     className="btn btn-sm btn-ghost bg-cyan-500 text-white hover:text-black">Logout</button>
 
                             </li>
