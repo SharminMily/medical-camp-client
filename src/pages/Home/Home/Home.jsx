@@ -4,6 +4,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import OurServices from "../OurServices/OurServices";
 import PopularCamp from "../PopularCamp/PopularCamp";
+import Reviews from "../Reviews/Reviews";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <Banner></Banner>
             <OurServices></OurServices>
             <PopularCamp></PopularCamp>
+            <Reviews></Reviews>
             <AboutUs></AboutUs>
         </div>
     );
