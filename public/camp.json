@@ -1,0 +1,158 @@
+[
+    {
+        "CampName": "Health for All Initiative",
+        "Camp_id": 1,
+        "Image": "https://i.ibb.co/xLQ87Pm/medical-Card1.png",
+        "Details": "Comprehensive medical camp offering general health check-ups, vaccinations, and health education.",
+        "CampFees": 15,
+        "Date": "2023-12-15",
+        "Time": "9:00 AM - 4:00 PM",
+        "Location": "City Park, Main Street, Healthville",
+        "Services": ["General Health Check-ups", "Immunizations", "Health Education"]
+    },
+    {
+        "CampName": "Dental Care Day",
+        "Camp_id": 2,
+        "Image": "https://i.ibb.co/hYs170z/medical-Card2.png",
+        "Details": "Focused on dental health with free dental check-ups, cleanings, and oral hygiene education.",
+        "CampFees": 23,
+        "Date": "2023-12-10",
+        "Time": "10:30 AM - 3:30 PM",
+        "Location": "Smile Clinic, Happy Avenue, Dentaltown",
+        "Services": ["Dental Check-ups", "Oral Hygiene Education", "Dental Treatments"]
+    },
+    {
+        "CampName": "Heart Wellness Expo",
+        "Camp_id": 3,
+        "Image": "https://i.ibb.co/FV7svzk/medical-Card3.png",
+        "Details": "Promoting heart health with cardiac check-ups, blood pressure monitoring, and fitness demonstrations.",
+        "CampFees": 10,
+        "Date": "2023-12-05",
+        "Time": "11:00 AM - 5:00 PM",
+        "Location": "Cardio Park, Pulse Street, Heartsville",
+        "Services": ["Cardiac Check-ups", "Blood Pressure Monitoring", "Fitness Demonstrations"]
+    },
+    {
+        "CampName": "Eyesight Awareness Camp",
+        "Camp_id": 4,
+        "Image": "https://i.ibb.co/pf5FgXw/medical-Card4.png",
+        "Details": "Providing eye examinations, distributing eyeglasses, and raising awareness about eye health.",
+        "CampFees": 41,
+        "Date": "2023-11-20",
+        "Time": "9:00 AM - 2:00 PM",
+        "Location": "Vision Center, Clearview Road, Eyesville",
+        "Services": ["Eye Examinations", "Distribution of Eyeglasses", "Eye Health Education"]
+    },
+    {
+        "CampName": "Healthy Kids Carnival",
+        "Camp_id": 5,
+        "Image": "https://i.ibb.co/7tdWbQT/medical-Card5.png",
+        "Details": "Tailored for children, featuring pediatric health check-ups, immunizations, and interactive health games.",
+        "CampFees": 12,
+        "Date": "2023-11-15",
+        "Time": "10:00 AM - 3:00 PM",
+        "Location": "Kid's Zone, Playful Street, Childtown",
+        "Services": ["Child Health Check-ups", "Immunizations", "Interactive Health Games"]
+    },
+    {
+        "CampName": "Diabetes Wellness Workshop",
+        "Camp_id": 6,
+        "Image": "https://i.ibb.co/v1rhj7L/medical-Card6.png",
+        "Details": "Educational sessions on diabetes management, glucose testing, and nutritional guidance.",
+        "CampFees": 15,
+        "Date": "2023-11-08",
+        "Time": "1:30 PM - 6:30 PM",
+        "Location": "Diabetes Center, Glucose Lane, Sugarville",
+        "Services": ["Diabetes Screenings", "Nutritional Guidance", "Educational Sessions"]
+    },
+    {
+        "CampName": "Vaccination Drive",
+        "Camp_id": 7,
+        "Image": "https://i.ibb.co/XFB0B0N/medical-Card7.png",
+        "Details": "A community-wide initiative offering free vaccinations for all age groups.",
+        "CampFees": 11,
+        "Date": "2023-11-1",
+        "Time": "8:00 AM - 4:00 PM",
+        "Location": "Vaccine Hub, Inoculation Street, Immunotown",
+        "Services": ["Vaccinations for All Ages", "Health Education on Vaccines"]
+    },
+    {
+        "CampName": "Senior Wellness Retreat",
+        "Camp_id": 8,
+        "Image": "https://i.ibb.co/2ZPDtzR/medical-Card8.png",
+        "Details": "Tailored for seniors, featuring health assessments, fall risk evaluations, and relaxation activities.",
+        "CampFees": 18,
+        "Date": "2023-10-28",
+        "Time": "11:00 AM - 4:00 PM",
+        "Location": "Golden Years Pavilion, Serenitetown",
+        "Services": ["Geriatric Health Assessments", "Fall Risk Evaluations", "Relaxation Activities"]
+    },
+    {
+        "CampName": "Women's Health Symposium",
+        "Camp_id": 9,
+        "Image": "https://i.ibb.co/5MHGLHy/medical-Card9.png",
+        "Details": "Empowering women with screenings, breast health awareness, and family planning services.",
+        "CampFees": 15,
+        "Date": "2023-10-14",
+        "Time": "9:30 AM - 3:30 PM",
+        "Location": "Empowerment Hall, Blossom Lane, Rosetown",
+        "Services": ["Women's Health Screenings", "Breast Health Awareness", "Family Planning Services"]
+    },
+    {
+        "CampName": "Mental Health Awareness Day",
+        "Camp_id": 10,
+        "Image": "https://i.ibb.co/wwC6TG6/medical-Card10.png",
+        "Details": "Focusing on mental health screenings, counseling services, and stress management workshops.",
+        "CampFees": 17,
+        "Date": "2023-10-05",
+        "Time": "12:00 PM - 5:00 PM",
+        "Location": "Mindful Plaza, Tranquil Street, Mindtown",
+        "Services": ["Mental Health Screenings", "Counseling Services", "Stress Management Workshops"]
+    }, 
+
+    {
+        "CampName": "Allergy Awareness Camp",
+        "Camp_id": 11,
+        "Image": "https://i.ibb.co/bJ8VbrV/medical-Card11.png",
+        "Details": "Focused on allergy screenings, consultations with allergists, and educational sessions on allergy management.",
+        "CampFees": 25,
+        "Date": "2024-09-22",
+        "Time": "1:00 PM - 6:00 PM",
+        "Location": "Allergy Care Center, Pollen Street, Allergytown",
+        "Services": ["Allergy Screenings", "Consultations with Allergists", "Allergy Management Education"]
+    },
+
+    {
+        "CampName": "Cancer Awareness and Screening Camp",
+        "Camp_id": 12,
+        "Image": "https://i.ibb.co/tZH70Rh/medical-Card12.png",
+        "Details": "Dedicated to cancer awareness, screenings, and consultations with oncologists.",
+        "CampFees": 10,
+        "Date": "2024-09-18",
+        "Time": "9:30 AM - 3:30 PM",
+        "Location": "Hopeful Hall, Survivor Street, Cancerville",
+        "Services": ["Cancer Screenings", "Consultations with Oncologists", "Cancer Awareness Sessions"]
+    },
+    {
+        "CampName": "Community Blood Donation",
+        "Camp_id": 13,
+        "Image": "https://i.ibb.co/5rhWgzc/medical-Card13.png",
+        "Details": "Encouraging blood donations with mobile blood donation units, health check-ups, and donor appreciation.",
+        "CampFees": 18,
+        "Date": "2024-08-15",
+        "Time": "8:00 AM - 4:00 PM",
+        "Location": "Various Locations, Lifesaver District",
+        "Services": ["Blood Donations", "Health Check-ups", "Donor Appreciation"]
+    },
+    {
+        "CampName": "Gastrointestinal Health Fair",
+        "Camp_id": 14,
+        "Image": "https://i.ibb.co/McP0dNG/medical-Card14.png",
+        "Details": "Focused on gastrointestinal health with screenings, dietary advice, and consultations with gastroenterologists.",
+        "CampFees": 27,
+        "Date": "2024-07-12",
+        "Time": "1:00 PM - 6:00 PM",
+        "Location": "Digestive Dome, Gut Street, Gastroville",
+        "Services": ["GI Screenings", "Dietary Advice", "Consultations with Gastroenterologists"]
+    }   
+]
