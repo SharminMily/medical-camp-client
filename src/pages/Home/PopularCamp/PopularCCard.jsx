@@ -17,15 +17,15 @@ const PopularCCard = ({ camps }) => {
         }
         else {
             const isExits = campListItem.find((camps) => camps._id
-            === _id
+                === _id
             )
             if (!isExits) {
                 addCampArray.push(...campListItem, camps)
                 localStorage.setItem('camps', JSON.stringify(addCampArray))
-            //    toast.success("added!", "blog added successfully!", "success");
+                //    toast.success("added!", "blog added successfully!", "success");
             }
             else {
-            //    toast.error("already added!", "No duplicate !", "error");
+                //    toast.error("already added!", "No duplicate !", "error");
             }
 
 
@@ -37,10 +37,15 @@ const PopularCCard = ({ camps }) => {
         <>
             <div className=''>
                 <div className="card flex flex-col-reverse bg-base-100 shadow-xl border">
-                   
-                    <div className="card-body py-6">
+
+                    <div className="card-body pt-3 py-6">
+
+                        <div className="flex px-4 py- justify-center hover:text-white hover:bg-black   rounded-full border border-cyan-500">
+                            <h1 className="text-xl text-cyan-500 font-bold">Fee: ${CampFees}</h1>
+                        </div>
+
                         <h2 className="text-sm flex justify-start items-center "><IoLocationOutline />{Location}</h2>
-                        <h2 className="text-sm flex justify-start items-center "><IoTime className="mr-1 text-lg text-cyan-700"/> {Date}, {Time}</h2>
+                        <h2 className="text-sm flex justify-start items-center "><IoTime className="mr-1 text-lg text-cyan-700" /> {Date}, {Time}</h2>
                         <h5 className="card-title font-semibold">
                             {CampName}
                         </h5>
@@ -52,11 +57,11 @@ const PopularCCard = ({ camps }) => {
                             {/* <Link to={`/wishlist/${_id}`}><button className="btn  btn-outline btn-primary hover:btn-black">wishlist</button></Link> */}
                             {/*  onClick={() => handleDetailBtn(Camp_id)} */}
 
-                           <Link> <button onClick={handleAddToWishlist} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
+                            <Link> <button onClick={handleAddToWishlist} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
                         </div>
                     </div>
                     <div className="">
-                    <figure><img src={Image} alt="" className="h-[45vh] w-full" /></figure>
+                        <figure><img src={Image} alt="" className="h-[45vh] w-full" /></figure>
                     </div>
                 </div>
 

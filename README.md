@@ -1,6 +1,6 @@
 # Medical Camp management system
 
-### 5 main Features of your projects with bullet points.
+## 5 main Features of your projects with bullet points.
 1. User Authentication: Implement user registration and login functionality to allow users to create accounts, sign in securely, and personalize their experience on the website.
 
 2. Routing: Utilize a routing library (React Router) to create multiple pages or views within the website, enabling seamless navigation and deep linking.

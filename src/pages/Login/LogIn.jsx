@@ -23,7 +23,7 @@ const LogIn = () => {
         console.log('hello', email, password)
 
         singIn(email, password)
-            .then(res => {
+            .then(res => {8
                 const user = res.user;
                 console.log(user);
                 Swal.fire({

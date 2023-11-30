@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 const AvailableCCard = ({ camps }) => {
-    // console.log(category)
+    console.log('how are you', camps)
     // eslint-disable-next-line no-unused-vars
     const { Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
 
 
     const handleDetailBtn = Camp_id => {
-        console.log('hello')
+        console.log()
     }
 
     return (
@@ -22,7 +22,10 @@ const AvailableCCard = ({ camps }) => {
                         </div>
 
                     </div>
-                    <div className="card-body py-6">
+                    <div className="card-body pt-4 py-6">
+                        <div className="flex justify-center rounded-full border border-cyan-500">
+                            <h1 className="text-2xl text-cyan-500 font-bold">Fee: ${CampFees}</h1>
+                        </div>
                         <h2 className="text-sm ">{Location}</h2>
                         <h5 className="card-title font-semibold">
                             {CampName}
@@ -54,35 +57,40 @@ const AvailableCCard = ({ camps }) => {
                                      text-base normal-case">{Date}</button>
                                         <button className='btn btn-outline btn-primary text-base'>{Time}</button>
                                     </div>
-                                    <h2 className="card-title font-bold text-2xl text-blue-600">{CampName}</h2>
-                                    <p>{Location}</p>
-                                    <p>{Details}</p>
-                                    <div className="card-actions">
-                                        <div className="rating w-24 rating-lg rating-half">
-                                            <input type="radio" name="rating-10" className="rating-hidden" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                                            <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                                        </div>
-                                    </div>
 
+                                    <div className="flex px-4 py- justify-center rounded-full border border-cyan-500">
+                                    <h1 className="text-xl text-cyan-500 font-bold">Fee: ${CampFees}</h1>
                                 </div>
+
+                                <h2 className="card-title font-bold text-2xl text-blue-600">{CampName}</h2>
+                                <p>{Location}</p>
+                                <p>{Details}</p>
+                                <div className="card-actions">
+                                    <div className="rating w-24 rating-lg rating-half">
+                                        <input type="radio" name="rating-10" className="rating-hidden" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                                        <input type="radio" name="rating-10" className="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                                    </div>
+                                </div>
+
                             </div>
-                            <div className="modal-action flex justify-center">
-                                <button className="btn btn-outline btn-error">Close</button>
-                            </div>
-                        </form>
+                        </div>
+                        <div className="modal-action flex justify-center">
+                            <button className="btn btn-outline btn-error">Close</button>
+                        </div>
+                    </form>
                     </dialog>
                 }
 
-            </div>
+        </div >
         </>
     );
 };
