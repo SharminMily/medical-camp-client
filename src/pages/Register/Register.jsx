@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Register = () => {
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate()
-    
+
 
 
     const onSubmit = data => {
@@ -27,7 +27,7 @@ const Register = () => {
                     .then(() => {
                         console.log('user profile info update')
                         reset();
-                  
+
                         Swal.fire({
                             position: "top-end",
                             icon: "success",

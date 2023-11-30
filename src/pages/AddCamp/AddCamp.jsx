@@ -38,13 +38,13 @@ const AddCamp = () => {
 
     return (
         <div>
-             <Helmet>
-                <title>Medical Camp | Add camp</title>                
+            <Helmet>
+                <title>Medical Camp | Add camp</title>
             </Helmet>
-            <NavBar></NavBar>    
+            <NavBar></NavBar>
             <div className="">
-            <Cover img="https://i.ibb.co/NLPm5R2/Screenshot-2023-11-25-100955.png" title="Your Adding  camp here "></Cover>
-            </div>       
+                <Cover img="https://i.ibb.co/NLPm5R2/Screenshot-2023-11-25-100955.png" title="Your Adding  camp here "></Cover>
+            </div>
             <SectionTitle subHeading="Add Card" heading="Add to Card"></SectionTitle>
 
             <div>
@@ -63,8 +63,6 @@ const AddCamp = () => {
                 }
 
                 <div className='text-center my-8'>
-                    {/* {donation.length > 4 && <button onClick={()=>setIsSee(!isSee)}  className='p-4 bg-blue-700  text-white rounded-lg mx-auto block'> {isSee ? "See less" : "See All"} </button>   
-                }  */}
                     {camps.length > 4 && !isSee && (
                         <button
                             onClick={() => setIsSee(!isSee)}

@@ -22,8 +22,7 @@ Medical camps offer a variety of healthcare services to communities, especially 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 m-2 bg-gray-50 p-10 shadow-lg">
                 {/* card -1 */}
 
-                {
-                    // healthCare.map(camps => <i key={camps.Camp_id} ></i>)
+                {                   
                     healthCare.map(camps => <div key={camps.Camp_id} style={{ borderRadius: '5px 5px 100px 5px' }} className="card border hover:bg-cyan-500 hover:text-white border-cyan-400 bg-base-100 shadow-xl">
                         <div className="card-body">
                             <div className=" flex justify-center items-center">
