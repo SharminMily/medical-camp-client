@@ -6,6 +6,9 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
+
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
@@ -16,11 +19,11 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div className='my-20'>
-            <SectionTitle heading="reviews" subHeading="medical Camp Review" description="What Our Client say about Medical management system">                
+        <div className='mx-20 my-12'>
+            <SectionTitle heading="reviews" subHeading="medical Camp Top Review" description="What Our Client say about Medical management system">
             </SectionTitle>
 
-           
+
 
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper"></Swiper>
 
@@ -29,9 +32,15 @@ const Reviews = () => {
 
                     {
                         reviews.map(reviews => <SwiperSlide key={reviews._id}>
-                            <div className='m-10'>
-                                <h1 className="text-2xl text-cyan-500 text-center">{reviews.name}</h1>
-                                <p>{reviews.details}</p>
+                            <div className='my-16 mx-24 flex flex-col items-center text-center'>
+                                <img className='w-24 rounded-full mb-2' src={reviews.image} alt="" />
+                                <Rating
+                                    style={{ maxWidth: 180 }}
+                                    value={reviews.rating}
+                                    readOnly
+                                />
+                                <p className='mt-4'>{reviews.details}</p>
+                                <h1 className="text-2xl text-cyan-500 font-semibold text-center my-4">{reviews.name}</h1>
                             </div>
                         </SwiperSlide>)
                     }

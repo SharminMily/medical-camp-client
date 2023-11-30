@@ -1,7 +1,38 @@
-import { IoLocationOutline } from "react-icons/io5";
+/* eslint-disable react/prop-types */
+import { IoLocationOutline, IoTime } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const PopularCCard = ({ camps }) => {
-    const { Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
+    const { _id, Camp_id, CampName, Details, CampFees, Date, Location, Time, Services, Image } = camps;
+
+    const handleAddToWishlist = () => {
+        // console.log(blog)
+        const addCampArray = [];
+
+        const campListItem = JSON.parse(localStorage.getItem('camps'));
+        if (!campListItem) {
+            addCampArray.push(camps);
+            localStorage.setItem('camps', JSON.stringify(addCampArray))
+            // toast.success("added!", "blog added successfully!", "success");
+        }
+        else {
+            const isExits = campListItem.find((camps) => camps._id
+            === _id
+            )
+            if (!isExits) {
+                addCampArray.push(...campListItem, camps)
+                localStorage.setItem('camps', JSON.stringify(addCampArray))
+            //    toast.success("added!", "blog added successfully!", "success");
+            }
+            else {
+            //    toast.error("already added!", "No duplicate !", "error");
+            }
+
+
+        }
+
+    }
+
     return (
         <>
             <div className=''>
@@ -9,6 +40,7 @@ const PopularCCard = ({ camps }) => {
                    
                     <div className="card-body py-6">
                         <h2 className="text-sm flex justify-start items-center "><IoLocationOutline />{Location}</h2>
+                        <h2 className="text-sm flex justify-start items-center "><IoTime className="mr-1 text-lg text-cyan-700"/> {Date}, {Time}</h2>
                         <h5 className="card-title font-semibold">
                             {CampName}
                         </h5>
@@ -20,7 +52,7 @@ const PopularCCard = ({ camps }) => {
                             {/* <Link to={`/wishlist/${_id}`}><button className="btn  btn-outline btn-primary hover:btn-black">wishlist</button></Link> */}
                             {/*  onClick={() => handleDetailBtn(Camp_id)} */}
 
-                            <button className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button>
+                           <Link> <button onClick={handleAddToWishlist} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
                         </div>
                     </div>
                     <div className="">

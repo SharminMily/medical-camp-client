@@ -9,6 +9,7 @@ import Services from "../pages/Services/Services";
 import AvailableCamps from "../pages/AvailableCamps/AvailableCamps";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import AddCamp from "../pages/AddCamp/AddCamp";
 
 
 export const router = createBrowserRouter([
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: 'services',
         element: <Services></Services>
+      },
+      {
+        path: 'addCamp',
+        element: <AddCamp></AddCamp>
       },
       {
         path: 'availableCamps',
