@@ -25,7 +25,7 @@ const AvailableCamps = () => {
 
             <SectionTitle heading="All MCMS Here" subHeading="medical camp" description=""></SectionTitle>
 
-            <div className='bg-gray-200 min-h-screen p-8 my-16 w-full max-w-[1200px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-6 items-center'>
+            <div className='bg-gray-200 min-h-screen py-4 my-16 w-full max-w-[1200px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-2 gap-2 items-center'>
 
                 {
                     allCamps.map(camps => <AvailableCCard key={camps.Camp_id} camps={camps}></AvailableCCard>)

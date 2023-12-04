@@ -63,9 +63,9 @@ const Dashboard = () => {
                                         Payment History</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/professionals">
+                                    <NavLink to="/dashboard/feedbackRatings">
                                         <GiAchievement></GiAchievement>
-                                        Feedback And Ratings
+                                        Feedback & Ratings
                                         </NavLink>
                                 </li>
                                 <li>

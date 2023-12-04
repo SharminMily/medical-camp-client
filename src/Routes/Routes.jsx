@@ -26,6 +26,8 @@ import PRegisteredCamp from "../pages/Dashboard/Participants/PRegisteredCamp";
 import PaymentHistory from "../pages/Dashboard/Participants/PaymentHistory";
 import FeedbackRatings from "../pages/Dashboard/Participants/FeedbackRatings";
 import PopularCampDetails from "../pages/Home/PopularCamp/PopularCampDetails";
+import AdminRoute from "./AdminRoute";
+import UpdateCamp from "../pages/Dashboard/Organizer/UpdateCamp";
 
 
 
@@ -54,7 +56,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'popularCampDetails/:id',
-        element: <PopularCampDetails></PopularCampDetails>,
+        element: <PrivateRoute><PopularCampDetails></PopularCampDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/camps/${params.id}`)
       },
       {
@@ -83,19 +85,28 @@ export const router = createBrowserRouter([
       //  Organizer Routes
       {
         path: "organizerProfile",
-        element: <OrganizerProfile></OrganizerProfile>
+        element: <AdminRoute><OrganizerProfile></OrganizerProfile></AdminRoute>
       },
       {
         path: "addACamp",
-        element: <AddACamp></AddACamp>
+        element: <AdminRoute><AddACamp></AddACamp></AdminRoute>
       },
       {
         path: "manageCamps",
-        element: <ManageCamp></ManageCamp>
+        element: <AdminRoute><ManageCamp></ManageCamp></AdminRoute>
       },
       {
-        path: "registeredCamps",
-        element: <RegisteredCamps></RegisteredCamps>
+        path: "updateCamp/:id",
+        element: <AdminRoute><UpdateCamp></UpdateCamp></AdminRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/camps/${params.id}`)
+      },
+      {
+        path: "registeredCamp",
+        element: <AdminRoute><RegisteredCamps></RegisteredCamps></AdminRoute>
+      },
+      {
+        path: "allUsers",
+        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
 
       // Participant Routes
@@ -125,10 +136,7 @@ export const router = createBrowserRouter([
         path: "addCamp",
         element: <AddCamps></AddCamps>
       },
-      {
-        path: "allUsers",
-        element: <AllUsers></AllUsers>
-      }
+     
     ]
   },
 
