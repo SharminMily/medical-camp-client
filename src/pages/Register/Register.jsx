@@ -7,8 +7,10 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import SocialAccount from "../Shared/SocialAccount/SocialAccount";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Register = () => {
+    const axiosPublic = useAxiosPublic();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -25,17 +27,28 @@ const Register = () => {
 
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('user profile info update')
-                        reset();
-
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "User created successfully",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        navigate("/")
+                        // create user entry in the date database
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email,
+                            image: data.photoURL
+                        }
+                        axiosPublic.post('/users', userInfo)
+                        .then(res => {
+                            if(res.data.insertedId){
+                                console.log('user added to the database')
+                                reset();
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: "success",
+                                    title: "User created successfully",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                                navigate("/")
+                            }
+                        })                      
+                        
 
                     })
                     .catch(error => console.log(error))

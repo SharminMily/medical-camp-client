@@ -14,13 +14,13 @@ const LogIn = () => {
     const location = useLocation();
 
     const from = location.state?.from?.pathname || "/";
-    console.log('state in the location login page', location.state)
+    // console.log('state in the location login page', location.state)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log('hello', email, password)
+        // console.log('hello', email, password)
 
         singIn(email, password)
             .then(res => {8

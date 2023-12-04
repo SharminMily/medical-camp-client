@@ -13,14 +13,15 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://medical-camp-server-tau.vercel.app/reviews')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+    // console.log(reviews)
 
     return (
         <div className='mx-20 my-12 pt-6 px-6 bg-gray-50'>
-            <SectionTitle heading="reviews" subHeading="medical Camp Top Review" description="What Our Client say about Medical management system">
+            <SectionTitle subHeading="What Our Patients Says" heading="Testimonials">
             </SectionTitle>
 
 
@@ -33,14 +34,22 @@ const Reviews = () => {
                     {
                         reviews.map(reviews => <SwiperSlide key={reviews._id}>
                             <div className='my-16 mx-24 flex flex-col items-center text-center'>
-                                <img className='w-24 rounded-full mb-2' src={reviews.image} alt="" />
+
                                 <Rating
                                     style={{ maxWidth: 180 }}
                                     value={reviews.rating}
                                     readOnly
                                 />
-                                <p className='mt-4'>{reviews.details}</p>
-                                <h1 className="text-2xl text-cyan-500 font-semibold text-center my-4">{reviews.name}</h1>
+                                <p className='mt-4'>{reviews.description}</p>
+
+                                <div className='mt-4 flex justify-center items-center gap-2'>
+                                    <img className='w-16 rounded-full border-double border-cyan-600 border mb-2' src={reviews.image} alt="" />
+                                    <div className="">
+                                    <h1 className="text-lg text-cyan-600 font-semibold ">{reviews.name}</h1>
+                                        <p className='text-center'>{reviews.date}</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </SwiperSlide>)
                     }

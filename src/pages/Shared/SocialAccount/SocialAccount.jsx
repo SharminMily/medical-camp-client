@@ -3,28 +3,45 @@ import { FaGoogle } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../provider/AuthProvider";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const SocialAccount = () => {
 
     const {googleLogin } = useContext(AuthContext);
+    const axiosPublic = useAxiosPublic()
+
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleGoogle = (media) => {  
-        media()
-        .then(res => console.log(res))       
-            console.log("res.user")
-            Swal.fire({
-                title: 'User Login Successful.',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                }
-            });
-            navigate(location?.state? location.state : '/')
-        .catch(err => console.log(err))            
+    const handleGoogle = () => {  
+        googleLogin()
+        .then(result => {
+            console.log(result.user);
+            const userInfo = {
+                email: result.user?.email,
+                name: result.user?.displayName,
+                image: result.user?.photoURL
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res => {
+                console.log(res.data);
+                navigate('/')
+            })
+        })
+        // media()
+        // .then(res => console.log(res))       
+        //     console.log("res.user")
+        //     Swal.fire({
+        //         title: 'User Login Successful.',
+        //         showClass: {
+        //             popup: 'animate__animated animate__fadeInDown'
+        //         },
+        //         hideClass: {
+        //             popup: 'animate__animated animate__fadeOutUp'
+        //         }
+        //     });
+        //     navigate(location?.state? location.state : '/')
+        // .catch(err => console.log(err))            
     }
 
 

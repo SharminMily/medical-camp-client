@@ -10,7 +10,7 @@ const OurServices = () => {
             .then(res => res.json())
             .then(data => setHealthCare(data))
     }, []);
-    console.log(healthCare)
+    // console.log(healthCare)
 
     return (
         <div className="my-20 ">

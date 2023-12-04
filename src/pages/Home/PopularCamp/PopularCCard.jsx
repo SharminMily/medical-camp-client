@@ -57,13 +57,15 @@ const PopularCCard = ({ camps }) => {
     return (
         <>
             <div className=''>
-                <div className="card flex flex-col-reverse bg-base-100 shadow-xl border">
+                <div className="card flex flex-col bg-base-100 shadow-xl border">
+                    <div className="relative">
+                        <figure><img src={Image} alt="" className="h-[45vh] w-full" /></figure>
+                    </div>
+                    <div className="flex absolute px-4 py-1 justify-center hover:text-white bg-black hover:bg-white border border-cyan-500">
+                        <h1 className="text-xl text-cyan-500 font-semibold">Fee: ${CampFees}</h1>
+                    </div>
 
                     <div className="card-body pt-3 py-6">
-
-                        <div className="flex px-4 py- justify-center hover:text-white hover:bg-black   rounded-full border border-cyan-500">
-                            <h1 className="text-xl text-cyan-500 font-bold">Fee: ${CampFees}</h1>
-                        </div>
 
                         <h2 className="text-sm flex justify-start items-center "><IoLocationOutline />{Location}</h2>
                         <h2 className="text-sm flex justify-start items-center "><IoTime className="mr-1 text-lg text-cyan-700" /> {Date}, {Time}</h2>
@@ -73,19 +75,16 @@ const PopularCCard = ({ camps }) => {
                         <p>{Details}</p>
 
                         <div className="flex justify-center gap-2">
-                            <button onClick={() => document.getElementById(Camp_id).showModal()} className='btn bg-cyan-600 text-white hover:bg-black '>More Details</button>
-
-                            {/* <Link to={`/wishlist/${_id}`}><button className="btn  btn-outline btn-primary hover:btn-black">wishlist</button></Link> */}
+                            <Link  to={`/popularCampDetails/${_id}`}><button className='btn bg-cyan-600 text-white hover:bg-black '>More Details</button></Link>
+                           
                             {/*  onClick={() => handleDetailBtn(Camp_id)} */}
 
                             <Link> <button onClick={handleAddToCamp} className='btn  btn-outline border-cyan-500 text-cyan-500 hover:btn-black '>Add Camp</button></Link>
                         </div>
                     </div>
-                    <div className="">
-                        <figure><img src={Image} alt="" className="h-[45vh] w-full" /></figure>
-                    </div>
-                </div>
 
+                </div>
+{/* 
                 {
                     <dialog id={Camp_id} className="modal modal-bottom sm:modal-middle">
                         <form method="dialog" className="modal-box ">
@@ -126,7 +125,7 @@ const PopularCCard = ({ camps }) => {
                             </div>
                         </form>
                     </dialog>
-                }
+                } */}
 
             </div>
         </>

@@ -3,10 +3,12 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+// import useCart from "../../../hooks/useCart";
 
 const NavBar = () => {
 
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+    // const [cart] = useCart()
 
     const handleLogOut = () => {
         logOut()
@@ -19,19 +21,23 @@ const NavBar = () => {
             <NavLink to='/' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Home
             </NavLink>
-        </li>      
+        </li>
         <li>
-            <NavLink to='/availableCamps' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
+            <NavLink to='/camps' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Available Camps
             </NavLink>
         </li>
-        <li>
+
+        {/* <li>
             <NavLink to='/addCamp' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add Camp
             </NavLink>
-        </li>
+        </li> */}
+        {/* <button className="btn">Inbox
+            <div className="badge badge-secondary">+{cart.length}</div>
+        </button> */}
 
-          <li>
+        <li>
             <NavLink to='/dashboard' className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
       hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Dashboard
             </NavLink>
@@ -44,7 +50,7 @@ const NavBar = () => {
         </li>
 
 
-     
+
     </>
 
     return (
@@ -91,7 +97,7 @@ const NavBar = () => {
                         :
                         <NavLink to="/login"><a className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 
                         hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Login</a></NavLink>
-                    }                   
+                    }
                 </div>
             </div>
         </>

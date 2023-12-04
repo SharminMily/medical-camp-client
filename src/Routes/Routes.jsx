@@ -11,7 +11,23 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import AddCamp from "../pages/AddCamp/AddCamp";
 import ContactUs from "../pages/ContactUs/ContactUs";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Dashboard from "../Layout/Dashboard";
+import AddCamps from "../pages/Dashboard/AddCamps/AddCamps";
+
+import Healthcare from "../pages/Dashboard/Healthcare/Healthcare";
+import Camps from "../pages/Camps/Camps";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUSers";
+import OrganizerProfile from "../pages/Dashboard/Organizer/OrganizerProfile";
+import AddACamp from "../pages/Dashboard/Organizer/AddACamp";
+import ManageCamp from "../pages/Dashboard/Organizer/ManageCamp";
+import RegisteredCamps from "../pages/Dashboard/Organizer/RegisteredCamps";
+import ParticipantProfile from "../pages/Dashboard/Participants/ParticipantProfile";
+import PRegisteredCamp from "../pages/Dashboard/Participants/PRegisteredCamp";
+import PaymentHistory from "../pages/Dashboard/Participants/PaymentHistory";
+import FeedbackRatings from "../pages/Dashboard/Participants/FeedbackRatings";
+import PopularCampDetails from "../pages/Home/PopularCamp/PopularCampDetails";
+
+
 
 
 export const router = createBrowserRouter([
@@ -24,23 +40,32 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>
       },
+      // {
+      //   path: 'services',
+      //   element: <Services></Services>
+      // },     
       {
-        path: 'services',
-        element: <Services></Services>
-      },     
+        path: 'camps',
+        element: <Camps></Camps>
+      },
       {
         path: 'availableCamps',
         element: <PrivateRoute><AvailableCamps></AvailableCamps></PrivateRoute>
       },
       {
+        path: 'popularCampDetails/:id',
+        element: <PopularCampDetails></PopularCampDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/camps/${params.id}`)
+      },
+      {
         path: 'addCamp',
         element: <PrivateRoute><AddCamp></AddCamp></PrivateRoute>
-      },     
+      },
       {
         path: 'contact',
         element: <ContactUs></ContactUs>
       },
-     ]
+    ]
   },
   {
     path: '/login',
@@ -53,7 +78,58 @@ export const router = createBrowserRouter([
 
   {
     path: 'dashboard',
-    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      //  Organizer Routes
+      {
+        path: "organizerProfile",
+        element: <OrganizerProfile></OrganizerProfile>
+      },
+      {
+        path: "addACamp",
+        element: <AddACamp></AddACamp>
+      },
+      {
+        path: "manageCamps",
+        element: <ManageCamp></ManageCamp>
+      },
+      {
+        path: "registeredCamps",
+        element: <RegisteredCamps></RegisteredCamps>
+      },
+
+      // Participant Routes
+      {
+        path: "participantProfile",
+        element: <ParticipantProfile></ParticipantProfile>
+      },
+      {
+        path: "registeredCamps",
+        element: <PRegisteredCamp></PRegisteredCamp>
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: "feedbackRatings",
+        element: <FeedbackRatings></FeedbackRatings>
+      },
+      // 
+      {
+        path: "healthcare",
+        element: <Healthcare></Healthcare>
+      },
+
+      {
+        path: "addCamp",
+        element: <AddCamps></AddCamps>
+      },
+      {
+        path: "allUsers",
+        element: <AllUsers></AllUsers>
+      }
+    ]
   },
 
 ]);
