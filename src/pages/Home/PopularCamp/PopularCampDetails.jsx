@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import { FiPhoneForwarded } from "react-icons/fi";
 
 const PopularCampDetails = () => {
 
     const camp = useLoaderData()
-    console.log(camp)
+    // console.log(camp)
 
 
 

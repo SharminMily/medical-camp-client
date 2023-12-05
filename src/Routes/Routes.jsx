@@ -5,7 +5,7 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/Login/LogIn";
 import Register from "../pages/Register/Register";
-import Services from "../pages/Services/Services";
+// import Services from "../pages/Services/Services";
 import AvailableCamps from "../pages/AvailableCamps/AvailableCamps";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
@@ -98,7 +98,7 @@ export const router = createBrowserRouter([
       {
         path: "updateCamp/:id",
         element: <AdminRoute><UpdateCamp></UpdateCamp></AdminRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/camps/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/camps/${params.id}`)
       },
       {
         path: "registeredCamp",
@@ -136,7 +136,7 @@ export const router = createBrowserRouter([
         path: "addCamp",
         element: <AddCamps></AddCamps>
       },
-     
+
     ]
   },
 

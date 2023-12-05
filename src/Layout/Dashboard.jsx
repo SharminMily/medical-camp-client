@@ -58,7 +58,7 @@ const Dashboard = () => {
                                         registered camps</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/healthcare">
+                                    <NavLink to="/dashboard/paymentHistory">
                                         <MdOutlineHealthAndSafety></MdOutlineHealthAndSafety>
                                         Payment History</NavLink>
                                 </li>
@@ -74,7 +74,7 @@ const Dashboard = () => {
                                         Organizer</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/addCamp">
+                                    <NavLink to="/addCamp">
                                         <FaAd></FaAd>
                                         Add Camp
                                     </NavLink>

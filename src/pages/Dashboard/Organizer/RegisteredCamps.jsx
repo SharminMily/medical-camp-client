@@ -1,18 +1,18 @@
 import { Helmet } from "react-helmet-async";
+import useCart from "../../../hooks/useCart";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const RegisteredCamps = () => {
+    const [cart] = useCart();
+    const totalFree = cart.reduce((total, item) => total + item.price, 0);
+    const axiosSecure = useAxiosSecure();
     return (
         <div>
             <Helmet>
                 <title>Organizer | Registered Camps</title>
             </Helmet>
-            Payment Handling:
-            ○ Implement the Stripe.js integration to securely manage participant
-            payments.
-            ○ Initialize the payment status as Unpaid, indicating pending
-            payments.
-            ○ Upon successful payment via Stripe.js, seamlessly update the
-            payment status to Paid.
+           
+
         </div>
     );
 };

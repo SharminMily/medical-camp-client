@@ -45,11 +45,11 @@ const Reviews = () => {
                                 <div className='mt-4 flex justify-center items-center gap-2'>
                                     <img className='w-16 rounded-full border-double border-cyan-600 border mb-2' src={reviews.image} alt="" />
                                     <div className="">
-                                    <h1 className="text-lg text-cyan-600 font-semibold ">{reviews.name}</h1>
+                                        <h1 className="text-lg text-cyan-600 font-semibold ">{reviews.name}</h1>
                                         <p className='text-center'>{reviews.date}</p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </SwiperSlide>)
                     }

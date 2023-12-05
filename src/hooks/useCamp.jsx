@@ -16,14 +16,14 @@ const useCamp = () => {
     //         });
     // }, [])
 
-    const {data: camp = [], isPending: loading, refetch} = useQuery({
-        queryKey: ['camp'], 
-        queryFn: async() =>{
+    const { data: camp = [], isPending: loading, refetch } = useQuery({
+        queryKey: ['camp'],
+        queryFn: async () => {
             const res = await axiosPublic.get('/camps');
             return res.data;
         }
     })
-    return  [camp, loading, refetch]
+    return [camp, loading, refetch]
 };
 
 export default useCamp;
