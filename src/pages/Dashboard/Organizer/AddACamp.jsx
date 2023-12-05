@@ -25,24 +25,7 @@ const AddACamp = () => {
             }
         })
 
-        //     if(res.data.success){
-        //         const campsItem = {
-        //             campName: data.campName,
-        //             date: data.date,
-        //             time: data.time,
-        //             campFees: parseFloat(data.campFees),
-        //             location: data.location,
-        //             // services: data.services[0],                
-        //             details: data.details, 
-        //             image: res.data.data.display_url
-        //         }
-        //         // 
-        //         const campRes = await axiosSecure.post('/camps', campsItem)
-        //         console.log(campRes.data)
-        //         if(campRes.data.insertedId){
-        //             // 
-        //         }
-        // }
+        
         if (res.data.success) {
             // 
             const campItem = {

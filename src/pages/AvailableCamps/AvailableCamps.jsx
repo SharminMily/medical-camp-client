@@ -13,7 +13,7 @@ const AvailableCamps = () => {
             .then(res => res.json())
             .then(data => setAllCamps(data))
     }, []);
-    // console.log(allCamps)
+    console.log(allCamps)
     return (
         <>
             <Helmet>
@@ -28,7 +28,7 @@ const AvailableCamps = () => {
             <div className='bg-gray-200 min-h-screen py-4 my-16 w-full max-w-[1200px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-2 gap-2 items-center'>
 
                 {
-                    allCamps.map(camps => <AvailableCCard key={camps.Camp_id} camps={camps}></AvailableCCard>)
+                    allCamps.map(camps => <AvailableCCard key={camps.camp_id} camps={camps}></AvailableCCard>)
                 }
 
             </div>
